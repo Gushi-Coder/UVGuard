@@ -1,0 +1,35 @@
+# Secrets and device backups
+*.pem
+*.key
+*.keystore
+*.jks
+.env
+.env.*
+local.properties
+*backup*.hex
+*backup*.bin
+# Build products
+.gradle/
+build/
+_build/
+_secure_build/
+_unified_build/
+_gcc_secure/
+*.o
+*.axf
+*.hex
+*.bin
+*.apk
+*.zip
+*.map
+*.log
+*.uvguix.*
+*.uvoptx
+# Install official SDK dependencies locally, do not commit vendor distribution
+/firmware/nrf5_sdk/components/
+/firmware/nrf5_sdk/config/
+/firmware/nrf5_sdk/documentation/
+/firmware/nrf5_sdk/external/
+/firmware/nrf5_sdk/external_tools/
+/firmware/nrf5_sdk/integration/
+/firmware/nrf5_sdk/modules/

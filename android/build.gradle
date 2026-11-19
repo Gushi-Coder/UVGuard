@@ -1,0 +1,25 @@
+plugins { id 'com.android.application' version '8.5.2' }
+
+android {
+    useLibrary 'android.test.runner'
+    useLibrary 'android.test.base'
+    namespace 'com.uvguard.companion'
+    compileSdk 34
+    defaultConfig {
+        applicationId 'com.uvguard.companion'
+        minSdk 26
+        targetSdk 34
+        versionCode 340
+        versionName '3.4'
+        testInstrumentationRunner 'android.test.InstrumentationTestRunner'
+    }
+    sourceSets {
+        main { manifest.srcFile 'AndroidManifest.xml'; java.srcDirs = ['java']; res.srcDirs = ['res'] }
+        androidTest { java.srcDirs = ['androidTest'] }
+    }
+    testBuildType 'release'
+    // Release signing is intentionally not configured in this source repository.
+    buildTypes { release { minifyEnabled false } }
+    compileOptions { sourceCompatibility JavaVersion.VERSION_1_8; targetCompatibility JavaVersion.VERSION_1_8 }
+}
+dependencies { implementation 'no.nordicsemi.android:dfu:2.5.0' }
